@@ -23,4 +23,14 @@ vim.keymap.set("n", "<leader>w", '<C-w>')                                       
 
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
 
-vim.keymap.set("n", "<leader>1", vim.lsp.buf.format, {}) --formatting
+vim.keymap.set("n", "<leader>1", vim.lsp.buf.format, {})                           --formatting
+
+vim.keymap.set("n", "<leader>v", ':vsplit<CR>', { noremap = true, silent = true }) --Vertical Split
+vim.keymap.set("n", "<leader>h", ':split<CR>', { noremap = true, silent = true })  --Horizontal Split
+vim.keymap.set("n", "<leader>q", ':q<CR>', { noremap = true, silent = true })      --Close Window
+
+vim.keymap.set("n", '<leader>=', ':vertical resize +6<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", '<leader>-', ':vertical resize -6<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<leader>]', ':resize +6<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>[', ':resize -6<CR>', { noremap = true, silent = true })

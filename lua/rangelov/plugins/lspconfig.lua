@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "angularls", "csharp_ls", 'eslint', 'ts_ls', 'ast_grep', 'cssls', 'tailwindcss' },
+    ensure_installed = { "lua_ls", "angularls", "csharp_ls", 'eslint', 'ts_ls', 'ast_grep', 'cssls', 'tailwindcss', 'clangd' },
 }
 
 local lspconfig = require('lspconfig')
@@ -14,3 +14,7 @@ lspconfig.ast_grep.setup {capabilities = capabilities}
 lspconfig.ts_ls.setup {capabilities = capabilities}
 lspconfig.cssls.setup{capabilities = capabilities}
 lspconfig.tailwindcss.setup{capabilities = capabilities}
+lspconfig.clangd.setup{capabilities = capabilities}
+require('lspconfig').clangd.setup {
+    cmd = { "clangd", "--compile-commands-dir=./" },
+}

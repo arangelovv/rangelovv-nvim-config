@@ -21,7 +21,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)                                 --open/close nvim-tree
 vim.keymap.set("n", "<leader>w", '<C-w>')                                                --switch between split windows
 
-vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.hover, {})
 
 vim.keymap.set("n", "<leader>1", vim.lsp.buf.format, {})                           --formatting
 
